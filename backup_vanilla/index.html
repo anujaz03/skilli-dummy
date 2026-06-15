@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SKILLI - World-class custom software, app development, and technical consulting. We solve complex business problems through custom engineering, frontend design, and scalable cloud solutions.">
+    <meta name="keywords" content="web development, software development, Android app development, custom software, full stack development, frontend, backend, UI/UX design, digital transformation, technical consulting">
+    <meta name="author" content="SKILLI Systems">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SKILLI | Technology Built Around Your Problems">
+    <meta property="og:description" content="We don't just develop software. We identify business challenges, engineer scalable solutions, and build technology that drives measurable growth.">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SKILLI | Technology Built Around Your Problems">
+    <meta property="twitter:description" content="We don't just develop software. We identify business challenges, engineer scalable solutions, and build technology that drives measurable growth.">
+    
+    <title>SKILLI | Technology Built Around Your Problems</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor">
+        <div class="cursor-ring"></div>
+        <div class="cursor-dot"></div>
+        <div class="cursor-label"></div>
+    </div>
+
+    <!-- Futuristic Loading Screen -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-text">SKILLI</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="terminal-loader">
+                <div class="terminal-line">> INITIALIZING SKILLI CORE ENGINE...</div>
+                <div class="terminal-line">> ESTABLISHING SECURITY LAYER...</div>
+                <div class="terminal-line">> COMPILING DIGITAL INFRASTRUCTURE...</div>
+                <div class="terminal-line">> ALL SYSTEMS OPERATIONAL.</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text"><span id="progress-percent">0</span>% Ready</div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">SKILLI</span>
+                <span class="logo-dot"></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#story" class="nav-link">Our Story</a></li>
+                    <li><a href="#problems" class="nav-link">Problem Solvers</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#approach" class="nav-link">Approach</a></li>
+                    <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
+                    <li><a href="#projects" class="nav-link">Case Studies</a></li>
+                    <li><a href="#team-core" class="nav-link">Team</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-nav">Book Strategy Call</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Scroll Container (for Lenis) -->
+    <div id="scroll-wrapper">
+
+        <!-- Background Canvas (Particle Network) -->
+        <canvas id="bg-canvas"></canvas>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="grid-overlay"></div>
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-badge reveal-fade">
+                            <i data-lucide="shield-check" class="badge-icon"></i>
+                            <span>Next-Gen Software & Innovation Studio</span>
+                        </div>
+                        
+                        <h1 class="hero-title reveal-fade">
+                            Technology Built <br>
+                            <span class="gradient-text serif-emphasis">Around Your Problems.</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle reveal-fade">
+                            We don't just develop websites and applications. We identify business challenges, engineer scalable solutions, and build technology that drives measurable growth.
+                        </p>
+                        
+                        <div class="hero-ctas reveal-fade">
+                            <a href="#contact" class="btn btn-primary magnetic">
+                                <span>Book a Strategy Call</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary magnetic">
+                                <span>View Our Work</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Flow Diagram: Problem -> Analysis -> Strategy -> Development -> Growth -->
+                    <div class="hero-visual reveal-scale">
+                        <div class="flow-container">
+                            <svg class="flow-connector-svg" width="100%" height="100%">
+                                <defs>
+                                    <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#ff0055" />
+                                        <stop offset="25%" stop-color="#9d4edd" />
+                                        <stop offset="50%" stop-color="#0072ff" />
+                                        <stop offset="75%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="#39ff14" />
+                                    </linearGradient>
+                                </defs>
+                                <path class="flow-path" id="flow-path" d="M 50 150 Q 150 50 250 150 T 450 150 T 650 150 T 850 150" fill="none" stroke="url(#flow-gradient)" stroke-width="4" />
+                                <circle class="flow-pulse" r="6" fill="#00f0ff">
+                                    <animateMotion dur="6s" repeatCount="indefinite" path="M 50 150 Q 150 50 250 150 T 450 150 T 650 150 T 850 150" />
+                                </circle>
+                            </svg>
+
+                            <div class="flow-node node-problem" data-info="Identify inefficiencies, revenue leakages & UX bottlenecks">
+                                <div class="node-icon-wrapper"><i data-lucide="alert-triangle"></i></div>
+                                <span class="node-label">Problem</span>
+                            </div>
+                            <div class="flow-node node-analysis" data-info="Deep data audit, system analysis & architectural mapping">
+                                <div class="node-icon-wrapper"><i data-lucide="binary"></i></div>
+                                <span class="node-label">Analysis</span>
+                            </div>
+                            <div class="flow-node node-strategy" data-info="Engineered solution design & technology stack selection">
+                                <div class="node-icon-wrapper"><i data-lucide="compass"></i></div>
+                                <span class="node-label">Strategy</span>
+                            </div>
+                            <div class="flow-node node-development" data-info="Premium, clean code & agile development cycles">
+                                <div class="node-icon-wrapper"><i data-lucide="code-2"></i></div>
+                                <span class="node-label">Development</span>
+                            </div>
+                            <div class="flow-node node-growth" data-info="Ongoing optimization, cloud scaling & value metrics tracking">
+                                <div class="node-icon-wrapper"><i data-lucide="trending-up"></i></div>
+                                <span class="node-label">Growth</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Code Snippet Card -->
+                        <div class="floating-card hero-code-snippet">
+                            <div class="card-header">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                                <span class="card-title-text">skilli-solver.ts</span>
+                            </div>
+                            <pre class="code-editor"><code><span class="keyword">const</span> skilli = <span class="keyword">new</span> <span class="class">SkilliInnovationStudio</span>();
+<span class="keyword">const</span> businessProblems = [
+    <span class="str">"InefficientOps"</span>,
+    <span class="str">"LowConversions"</span>
+];
+
+<span class="keyword">await</span> skilli.engineerSolutions({
+    problems: businessProblems,
+    architecture: <span class="str">"ScalableCloud"</span>,
+    uxFocus: <span class="str">"HighPerformance"</span>,
+    outcome: <span class="str">"MeasurableGrowth"</span>
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-scroll-indicator">
+                    <span class="scroll-mouse">
+                        <span class="scroll-wheel"></span>
+                    </span>
+                    <span class="scroll-text">Explore SKILLI Ecosystem</span>
+                </div>
+            </section>
+
+            <!-- Storytelling Section ("Why SKILLI Was Created") -->
+            <section class="storytelling" id="story">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Why SKILLI <span class="serif-emphasis">Was Created</span></h2>
+                    <p class="section-desc reveal-fade">
+                        Technology should solve real business problems, not just exist. We bridged the gap between pure engineering and strategic business growth.
+                    </p>
+
+                    <div class="story-timeline-wrapper">
+                        <div class="story-progress-line">
+                            <div class="story-progress-fill" id="story-progress-fill"></div>
+                        </div>
+
+                        <div class="story-block reveal-slide-left">
+                            <div class="story-node-dot"></div>
+                            <div class="story-meta">01 / The Code-Only Trap</div>
+                            <div class="story-card">
+                                <h3>Focusing on Code, Ignoring the Business</h3>
+                                <p>
+                                    Most development agencies specialize purely in writing lines of code based on a rigid spec doc. They deliver features, but fail to solve the underlying problems that restrict your growth.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="story-block reveal-slide-right">
+                            <div class="story-node-dot"></div>
+                            <div class="story-meta">02 / The Real Pain Points</div>
+                            <div class="story-card">
+                                <h3>Where Businesses Actually Struggle</h3>
+                                <p>
+                                    In reality, businesses struggle with inefficient backend processes, poor customer onboarding experiences, manual bottlenecks, outdated software systems, and missed digital revenue opportunities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="story-block reveal-slide-left">
+                            <div class="story-node-dot"></div>
+                            <div class="story-meta">03 / Fusing Technology & Logic</div>
+                            <div class="story-card">
+                                <h3>The Strategic Engineering Approach</h3>
+                                <p>
+                                    We realized a new approach was needed. By pairing deep technological expertise with product design logic and business metrics, we engineer solutions that directly target customer pain points.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="story-block reveal-slide-right">
+                            <div class="story-node-dot"></div>
+                            <div class="story-meta">04 / The Birth of SKILLI</div>
+                            <div class="story-card">
+                                <h3>Technology Built Around Problems</h3>
+                                <p>
+                                    SKILLI was founded to operate as an elite innovation partner. We build state-of-the-art web platforms, scalable APIs, modern mobile applications, and custom software systems designed to scale from day one.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Solvers Section -->
+            <section class="problems" id="problems">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">We Solve Problems, <span class="serif-emphasis">Not Just Build Software</span></h2>
+                    <p class="section-desc reveal-fade">
+                        Hover or interact with each business problem to see the technological solution we engineer to solve it.
+                    </p>
+
+                    <div class="problem-grid">
+                        <!-- Problem Card 1 -->
+                        <div class="problem-card reveal-scale" data-hover-label="SOLVE">
+                            <div class="card-inner">
+                                <div class="card-face card-front">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-problem">Issue</span>
+                                        <i data-lucide="trending-down" class="problem-icon"></i>
+                                    </div>
+                                    <h3>Low Conversion Rates</h3>
+                                    <p>Your website experiences traffic but users bounce before purchasing or signing up, leading to wasted marketing budget.</p>
+                                    <div class="morph-hint">Hover to engineer solution <i data-lucide="arrow-right"></i></div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-solution">Engineered Solution</span>
+                                        <i data-lucide="zap" class="solution-icon"></i>
+                                    </div>
+                                    <h3>Conversion-First Frontend</h3>
+                                    <p>We build headless, ultra-fast web interfaces paired with A/B testing frameworks, micro-interactions, and visual analytics to turn visitors into customers.</p>
+                                    <div class="solution-tech">Vercel • Next.js • Tailwind</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Problem Card 2 -->
+                        <div class="problem-card reveal-scale" data-hover-label="SOLVE">
+                            <div class="card-inner">
+                                <div class="card-face card-front">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-problem">Issue</span>
+                                        <i data-lucide="clock" class="problem-icon"></i>
+                                    </div>
+                                    <h3>Slow Business Operations</h3>
+                                    <p>Your team spends hours running tasks across spreadsheet applications and legacy systems, leading to human errors.</p>
+                                    <div class="morph-hint">Hover to engineer solution <i data-lucide="arrow-right"></i></div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-solution">Engineered Solution</span>
+                                        <i data-lucide="cpu" class="solution-icon"></i>
+                                    </div>
+                                    <h3>Internal Automation Hub</h3>
+                                    <p>Custom administrative dashboards, database automations, and background batch integrations that streamline workloads down to clicks.</p>
+                                    <div class="solution-tech">Node.js • PostgreSQL • Redis</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Problem Card 3 -->
+                        <div class="problem-card reveal-scale" data-hover-label="SOLVE">
+                            <div class="card-inner">
+                                <div class="card-face card-front">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-problem">Issue</span>
+                                        <i data-lucide="frown" class="problem-icon"></i>
+                                    </div>
+                                    <h3>Poor User Experience</h3>
+                                    <p>Users find your app confusing, resulting in high churn, high support volume, and customer dissatisfaction.</p>
+                                    <div class="morph-hint">Hover to engineer solution <i data-lucide="arrow-right"></i></div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-solution">Engineered Solution</span>
+                                        <i data-lucide="layers" class="solution-icon"></i>
+                                    </div>
+                                    <h3>Behavior-Led Product Design</h3>
+                                    <p>We rebuild client journeys using modern Figma patterns, behavioral tracking, fluid UI design systems, and responsive, accessible layouts.</p>
+                                    <div class="solution-tech">Figma • React • Motion Design</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Problem Card 4 -->
+                        <div class="problem-card reveal-scale" data-hover-label="SOLVE">
+                            <div class="card-inner">
+                                <div class="card-face card-front">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-problem">Issue</span>
+                                        <i data-lucide="user-minus" class="problem-icon"></i>
+                                    </div>
+                                    <h3>Manual Processes</h3>
+                                    <p>Onboarding customers, generating billing, or sending updates is performed manually, capping your business scale.</p>
+                                    <div class="morph-hint">Hover to engineer solution <i data-lucide="arrow-right"></i></div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-solution">Engineered Solution</span>
+                                        <i data-lucide="refresh-cw" class="solution-icon"></i>
+                                    </div>
+                                    <h3>Seamless API Ecosystems</h3>
+                                    <p>We build automated webhooks, custom Stripe integrations, customer onboarding automation, and dynamic communication APIs.</p>
+                                    <div class="solution-tech">Python • Express • Stripe API</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Problem Card 5 -->
+                        <div class="problem-card reveal-scale" data-hover-label="SOLVE">
+                            <div class="card-inner">
+                                <div class="card-face card-front">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-problem">Issue</span>
+                                        <i data-lucide="server-crash" class="problem-icon"></i>
+                                    </div>
+                                    <h3>Scalability Issues</h3>
+                                    <p>Your system crashes during traffic surges, database queries lag, and cloud billing is ballooning out of control.</p>
+                                    <div class="morph-hint">Hover to engineer solution <i data-lucide="arrow-right"></i></div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-solution">Engineered Solution</span>
+                                        <i data-lucide="cloud-lightning" class="solution-icon"></i>
+                                    </div>
+                                    <h3>Serverless Cloud Arch</h3>
+                                    <p>Migration to scalable, load-balanced, and cache-heavy cloud infrastructures (AWS/GCP), running serverless microservices.</p>
+                                    <div class="solution-tech">AWS Lambda • Kubernetes • Docker</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Problem Card 6 -->
+                        <div class="problem-card reveal-scale" data-hover-label="SOLVE">
+                            <div class="card-inner">
+                                <div class="card-face card-front">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-problem">Issue</span>
+                                        <i data-lucide="database-backup" class="problem-icon"></i>
+                                    </div>
+                                    <h3>Legacy Software Systems</h3>
+                                    <p>Your codebase is messy, lacks documentation, uses outdated libraries, and is incredibly difficult to build features on.</p>
+                                    <div class="morph-hint">Hover to engineer solution <i data-lucide="arrow-right"></i></div>
+                                </div>
+                                <div class="card-face card-back">
+                                    <div class="problem-header">
+                                        <span class="card-tag tag-solution">Engineered Solution</span>
+                                        <i data-lucide="git-pull-request" class="solution-icon"></i>
+                                    </div>
+                                    <h3>Modular Refactoring</h3>
+                                    <p>We deploy API wrappers around your legacy systems, modernise database schemas, and safely migrate layers to modular codebases.</p>
+                                    <div class="solution-tech">TypeScript • GraphQL • Docker</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="services" id="services">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Engineering <span class="serif-emphasis">Digital Excellence</span></h2>
+                    <p class="section-desc reveal-fade">
+                        Our full suite of engineering capabilities is designed to solve your problems and scale with your user growth.
+                    </p>
+
+                    <div class="services-grid">
+                        <!-- Service 1 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="globe"></i></div>
+                            <h3>Web Development</h3>
+                            <p>Headless Next.js websites, dynamic web apps, and CMS solutions featuring unmatched responsiveness and performance score alignment.</p>
+                        </div>
+                        <!-- Service 2 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="smartphone"></i></div>
+                            <h3>Android & Mobile</h3>
+                            <p>High-fidelity native Kotlin and cross-platform Flutter mobile applications built for responsive navigation and offline execution.</p>
+                        </div>
+                        <!-- Service 3 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="database"></i></div>
+                            <h3>Full Stack Development</h3>
+                            <p>End-to-end architecture fusing clean, high-performance database design with stunning interactive frontend components.</p>
+                        </div>
+                        <!-- Service 4 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="layout-template"></i></div>
+                            <h3>Frontend Engineering</h3>
+                            <p>Pixel-perfect UI creation built on component libraries (React/Vue), focusing on fluid transitions and absolute accessibility.</p>
+                        </div>
+                        <!-- Service 5 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="server"></i></div>
+                            <h3>Backend Engineering</h3>
+                            <p>Highly robust Express/Python/Java server codebases designed for multithreaded requests and zero-downtime scalability.</p>
+                        </div>
+                        <!-- Service 6 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="layers"></i></div>
+                            <h3>SaaS Development</h3>
+                            <p>Complete multi-tenant platforms built with billing gateways, usage analytics trackers, and authentication systems.</p>
+                        </div>
+                        <!-- Service 7 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="link-2"></i></div>
+                            <h3>API Integration</h3>
+                            <p>High-security RESTful and GraphQL endpoints engineered with structured API documentation, request validation, and caching.</p>
+                        </div>
+                        <!-- Service 8 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="palette"></i></div>
+                            <h3>UI/UX Architecture</h3>
+                            <p>Wireframes, Figma design systems, motion prototyping, and visual guidelines created specifically around target demographic behavior.</p>
+                        </div>
+                        <!-- Service 9 -->
+                        <div class="service-card reveal-scale magnetic-glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="service-icon"><i data-lucide="terminal"></i></div>
+                            <h3>Custom Software</h3>
+                            <p>Bespoke automation software, desktop platforms, and digital transformation consulting targeting precise business metrics.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How We Work Section -->
+            <section class="approach" id="approach">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Our <span class="serif-emphasis">Approach</span></h2>
+                    <p class="section-desc reveal-fade">
+                        We map, model, build, and optimize technology with systematic transparency. Here is our product delivery lifecycle.
+                    </p>
+
+                    <div class="approach-wrapper">
+                        <!-- SVG Connection Line -->
+                        <svg class="approach-svg-line" width="100%" height="100%" preserveAspectRatio="none">
+                            <path class="approach-path" id="approach-path" d="" fill="none" stroke="rgba(0, 240, 255, 0.15)" stroke-width="4" />
+                            <path class="approach-path-active" id="approach-path-active" d="" fill="none" stroke="url(#approach-gradient)" stroke-width="4" />
+                            <linearGradient id="approach-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#0072ff" />
+                                <stop offset="50%" stop-color="#00f0ff" />
+                                <stop offset="100%" stop-color="#39ff14" />
+                            </linearGradient>
+                        </svg>
+
+                        <div class="approach-grid">
+                            <!-- Step 1 -->
+                            <div class="approach-card reveal-slide-left" data-step="1">
+                                <div class="step-num">01</div>
+                                <h3>Discovery</h3>
+                                <p>We dive deep into your company's processes, team structures, and product bottlenecks to fully map requirements.</p>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="approach-card reveal-slide-right" data-step="2">
+                                <div class="step-num">02</div>
+                                <h3>Problem Analysis</h3>
+                                <p>Our technical architects analyze datasets and system limits, transforming business problems into code definitions.</p>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="approach-card reveal-slide-left" data-step="3">
+                                <div class="step-num">03</div>
+                                <h3>Strategic Planning</h3>
+                                <p>We detail technology selections, database schemas, cloud infrastructure architectures, and launch strategies.</p>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="approach-card reveal-slide-right" data-step="4">
+                                <div class="step-num">04</div>
+                                <h3>Design</h3>
+                                <p>We build interactive design prototypes, Figma UI libraries, component boards, and map behavioral flows.</p>
+                            </div>
+                            <!-- Step 5 -->
+                            <div class="approach-card reveal-slide-left" data-step="5">
+                                <div class="step-num">05</div>
+                                <h3>Development</h3>
+                                <p>Engineering begins. Clean, optimized, modular codebase execution using Git version tracking and regular builds.</p>
+                            </div>
+                            <!-- Step 6 -->
+                            <div class="approach-card reveal-slide-right" data-step="6">
+                                <div class="step-num">06</div>
+                                <h3>Testing</h3>
+                                <p>Unit integrations, load testing, responsive styling inspections, vulnerability check runs, and bug mitigation cycles.</p>
+                            </div>
+                            <!-- Step 7 -->
+                            <div class="approach-card reveal-slide-left" data-step="7">
+                                <div class="step-num">07</div>
+                                <h3>Launch</h3>
+                                <p>Transition to production, configuring DNS registers, caching networks (CDN), and deploying cloud systems.</p>
+                            </div>
+                            <!-- Step 8 -->
+                            <div class="approach-card reveal-slide-right" data-step="8">
+                                <div class="step-num">08</div>
+                                <h3>Optimization</h3>
+                                <p>Continuous metric audits, user behavior reviews, server scale tuning, and feature extensions to sustain growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trust & Differentiation Section -->
+            <section class="trust" id="trust">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Why Businesses <span class="serif-emphasis">Choose SKILLI</span></h2>
+                    <p class="section-desc reveal-fade">
+                        We blend software engineering excellence with data insights to drive real-world business growth.
+                    </p>
+
+                    <div class="trust-grid">
+                        <div class="trust-content">
+                            <div class="diff-item reveal-slide-left">
+                                <div class="diff-icon"><i data-lucide="check-circle-2"></i></div>
+                                <div>
+                                    <h4>Problem-First Mindset</h4>
+                                    <p>We audit systems first. Code is our tool, but resolving your core business bottleneck is our primary deliverable.</p>
+                                </div>
+                            </div>
+                            <div class="diff-item reveal-slide-left">
+                                <div class="diff-icon"><i data-lucide="message-square"></i></div>
+                                <div>
+                                    <h4>Transparent Communication</h4>
+                                    <p>Weekly staging builds, active Slack networks, structured updates, and direct developer communication channels.</p>
+                                </div>
+                            </div>
+                            <div class="diff-item reveal-slide-left">
+                                <div class="diff-icon"><i data-lucide="git-branch"></i></div>
+                                <div>
+                                    <h4>Scalable Architectures</h4>
+                                    <p>We write dry, clean codebases using decoupled backends, componentised UIs, and auto-scaling server configurations.</p>
+                                </div>
+                            </div>
+                            <div class="diff-item reveal-slide-left">
+                                <div class="diff-icon"><i data-lucide="users"></i></div>
+                                <div>
+                                    <h4>Long-Term Partnerships</h4>
+                                    <p>We don't hand off templates. We maintain systems, analyze user dashboards, and upgrade technology alongside your brand.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Interactive Metrics Card -->
+                        <div class="trust-metrics reveal-scale">
+                            <div class="metrics-terminal">
+                                <div class="terminal-bar">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                    <span class="term-title">trust_metrics_process.sh</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="metric-row">
+                                        <div class="m-title">> Client Satisfaction</div>
+                                        <div class="m-bar"><div class="m-fill" style="width: 99.8%"></div></div>
+                                        <div class="m-value">99.8%</div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="m-title">> Automation Rate</div>
+                                        <div class="m-bar"><div class="m-fill" style="width: 85%"></div></div>
+                                        <div class="m-value">85.0%</div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="m-title">> Build Delivery (On-Time)</div>
+                                        <div class="m-bar"><div class="m-fill" style="width: 100%"></div></div>
+                                        <div class="m-value">100.0%</div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="m-title">> Infrastructure Uptime</div>
+                                        <div class="m-bar"><div class="m-fill" style="width: 99.99%"></div></div>
+                                        <div class="m-value">99.99%</div>
+                                    </div>
+                                    
+                                    <div class="terminal-output">
+                                        <span class="code-comment"># System optimization complete.</span><br>
+                                        <span class="code-comment"># SKILLI processes running at peak efficiency.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Ecosystem Section -->
+            <section class="ecosystem" id="ecosystem">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">The Technologies <span class="serif-emphasis">Powering Innovation</span></h2>
+                    <p class="section-desc reveal-fade">
+                        We design infrastructure using the industry's most robust, high-performance programming languages, cloud systems, and databases.
+                    </p>
+
+                    <!-- Futuristic Floating Technology Nodes Connected by Lines -->
+                    <div class="ecosystem-network-container reveal-scale">
+                        <canvas id="ecosystem-canvas"></canvas>
+                        
+                        <!-- Floating HTML Elements for Nodes (positioning set in CSS/JS) -->
+                        <div class="tech-node" data-category="frontend" style="top: 25%; left: 15%;" data-name="React">
+                            <span class="tech-icon">R</span><span class="tech-label">React</span>
+                        </div>
+                        <div class="tech-node" data-category="frontend" style="top: 40%; left: 30%;" data-name="NextJS">
+                            <span class="tech-icon">N</span><span class="tech-label">Next.js</span>
+                        </div>
+                        <div class="tech-node" data-category="frontend" style="top: 15%; left: 42%;" data-name="Vue">
+                            <span class="tech-icon">V</span><span class="tech-label">Vue</span>
+                        </div>
+                        <div class="tech-node" data-category="frontend" style="top: 30%; left: 55%;" data-name="Tailwind">
+                            <span class="tech-icon">T</span><span class="tech-label">Tailwind</span>
+                        </div>
+
+                        <div class="tech-node" data-category="backend" style="top: 70%; left: 20%;" data-name="NodeJS">
+                            <span class="tech-icon">JS</span><span class="tech-label">Node.js</span>
+                        </div>
+                        <div class="tech-node" data-category="backend" style="top: 60%; left: 45%;" data-name="Python">
+                            <span class="tech-icon">Py</span><span class="tech-label">Python</span>
+                        </div>
+                        <div class="tech-node" data-category="backend" style="top: 80%; left: 60%;" data-name="Java">
+                            <span class="tech-icon">J</span><span class="tech-label">Java</span>
+                        </div>
+
+                        <div class="tech-node" data-category="mobile" style="top: 20%; left: 75%;" data-name="Flutter">
+                            <span class="tech-icon">Fl</span><span class="tech-label">Flutter</span>
+                        </div>
+                        <div class="tech-node" data-category="mobile" style="top: 50%; left: 80%;" data-name="Kotlin">
+                            <span class="tech-icon">K</span><span class="tech-label">Kotlin</span>
+                        </div>
+
+                        <div class="tech-node" data-category="database" style="top: 80%; left: 35%;" data-name="PostgreSQL">
+                            <span class="tech-icon">Pg</span><span class="tech-label">PostgreSQL</span>
+                        </div>
+                        <div class="tech-node" data-category="database" style="top: 70%; left: 75%;" data-name="MongoDB">
+                            <span class="tech-icon">Db</span><span class="tech-label">MongoDB</span>
+                        </div>
+
+                        <div class="tech-node" data-category="cloud" style="top: 45%; left: 10%;" data-name="AWS">
+                            <span class="tech-icon">Aws</span><span class="tech-label">AWS</span>
+                        </div>
+                        <div class="tech-node" data-category="cloud" style="top: 52%; left: 62%;" data-name="GoogleCloud">
+                            <span class="tech-icon">Gcp</span><span class="tech-label">GCP</span>
+                        </div>
+                    </div>
+
+                    <div class="ecosystem-filter-bar reveal-fade">
+                        <button class="filter-btn active" data-filter="all">All Stack</button>
+                        <button class="filter-btn" data-filter="frontend">Frontend</button>
+                        <button class="filter-btn" data-filter="backend">Backend</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile</button>
+                        <button class="filter-btn" data-filter="database">Databases</button>
+                        <button class="filter-btn" data-filter="cloud">Cloud</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Showcase Section -->
+            <section class="projects" id="projects">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Transforming Ideas <span class="serif-emphasis">Into Digital Products</span></h2>
+                    <p class="section-desc reveal-fade">
+                        Browse some of our premium products engineered to target core operational challenges and scale digital revenue.
+                    </p>
+
+                    <div class="projects-list">
+                        <!-- Project 1 -->
+                        <div class="project-case reveal-scale">
+                            <div class="project-info">
+                                <span class="project-num">Case Study 01</span>
+                                <h3>Thumbzy</h3>
+                                <p class="project-subheading">AI YouTube Thumbnail Generator</p>
+                                <p class="project-description">
+                                    Thumbzy approached us to build a high-performance creator studio. We engineered a serverless AI rendering engine with a custom prompt builder and face-swap capabilities, optimizing CTR conversions with minimal processing overhead.
+                                </p>
+                                
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">+142%</span>
+                                        <span class="stat-desc">Average CTR Boost</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">150K+</span>
+                                        <span class="stat-desc">AI Thumbnails Generated</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-tech-tags">
+                                    <span>Next.js</span>
+                                    <span>Python AI</span>
+                                    <span>Stable Diffusion</span>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-visual-card">
+                                <div class="mockup-window">
+                                    <div class="window-header">
+                                        <div class="win-dot"></div>
+                                        <div class="win-dot"></div>
+                                        <div class="win-dot"></div>
+                                        <div class="win-address">https://thumbzy.ai/app</div>
+                                    </div>
+                                    <div class="window-body image-body">
+                                        <img src="assets/thumbzy_screenshot.png" alt="Thumbzy AI Workspace" class="mockup-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-case reveal-scale">
+                            <div class="project-info">
+                                <span class="project-num">Case Study 02</span>
+                                <h3>GIA</h3>
+                                <p class="project-subheading">Luxury Headless E-commerce</p>
+                                <p class="project-description">
+                                    For luxury brand GIA, we engineered an ultra-fast headless checkout engine. By implementing real-time stock synchronisation, an optimized payment gateway, and secure GIA Grading Report verification integrations, we boosted purchase reliability and conversion speed.
+                                </p>
+                                
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">2.4x</span>
+                                        <span class="stat-desc">Conversion Increase</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">&lt; 80ms</span>
+                                        <span class="stat-desc">Transition Speed</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-tech-tags">
+                                    <span>Next.js</span>
+                                    <span>Hydrogen</span>
+                                    <span>GraphQL</span>
+                                    <span>Stripe API</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-visual-card">
+                                <div class="mockup-window">
+                                    <div class="window-header">
+                                        <div class="win-dot"></div>
+                                        <div class="win-dot"></div>
+                                        <div class="win-dot"></div>
+                                        <div class="win-address">https://gia-atelier.com/checkout</div>
+                                    </div>
+                                    <div class="window-body image-body">
+                                        <img src="assets/gia_screenshot.png" alt="GIA E-commerce Storefront" class="mockup-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-case reveal-scale">
+                            <div class="project-info">
+                                <span class="project-num">Case Study 03</span>
+                                <h3>LinkFree</h3>
+                                <p class="project-subheading">Creator Economy Monetization Portal</p>
+                                <p class="project-description">
+                                    LinkFree wanted a next-generation link portal for creators. We engineered a mobile-first bio network that auto-configures layouts using AI, features real-time voice messages, integrates single-tap UPI monetization payments, and drives dynamic voting battles.
+                                </p>
+                                
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">$12.4M+</span>
+                                        <span class="stat-desc">Creator Revenue Processed</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">8.4x</span>
+                                        <span class="stat-desc">Engagement Multiplier</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-tech-tags">
+                                    <span>Next.js</span>
+                                    <span>Node.js</span>
+                                    <span>PostgreSQL</span>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-visual-card">
+                                <div class="mockup-window mobile-mockup">
+                                    <div class="window-header">
+                                        <div class="win-speaker"></div>
+                                        <div class="win-camera"></div>
+                                    </div>
+                                    <div class="window-body image-body">
+                                        <img src="assets/linkfree_screenshot.png" alt="LinkFree Creator Bio Link Portal" class="mockup-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Operating Core (Cinematic 3D Team Orbit) Section -->
+            <section class="team-core" id="team-core">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Team <span class="serif-emphasis">Operating Core</span></h2>
+                    <p class="section-desc reveal-fade">
+                        The specialists behind SKILLI. Orbiting around our central mission, our team coordinates to deliver high-performance custom engineering.
+                    </p>
+
+                    <!-- Cinematic Stage Container -->
+                    <div class="cinematic-stage-container reveal-scale">
+                        <!-- Vertical connector line connecting active member to center card -->
+                        <div class="cinematic-connector-line"></div>
+                        <!-- Central Pulsing Core -->
+                        <div class="cinematic-central-core" id="cinematic-central-core">
+                            <div class="core-ping-1"></div>
+                            <div class="core-ping-2"></div>
+                            <div class="core-inner"></div>
+                        </div>
+                        <!-- Holographic Guide Rings -->
+                        <div class="cinematic-orbit-ring ring-1"></div>
+                        <div class="cinematic-orbit-ring ring-2"></div>
+
+                        <!-- Active Member Center Container (2x larger) -->
+                        <div class="cinematic-center-member" id="cinematic-center-member">
+                            <div class="center-glow"></div>
+                            
+                            <!-- Stacked cutout portraits for all 6 members to enable smooth cross-fading -->
+                            <div class="center-portrait-wrapper" data-member="siddhi">
+                                <img src="assets/team/siddhi-k.png" alt="Siddhi Kawade" class="center-portrait">
+                            </div>
+                            <div class="center-portrait-wrapper" data-member="vishwanath">
+                                <img src="assets/team/vishwanath-hatti.png" alt="Vishwanath Hatti" class="center-portrait">
+                            </div>
+                            <div class="center-portrait-wrapper" data-member="prathmesh">
+                                <img src="assets/team/prathmesh.png" alt="Prathmesh Ghatmal" class="center-portrait">
+                            </div>
+                            <div class="center-portrait-wrapper glyph-portrait" data-member="anish">
+                                <div class="center-glyph-inner">
+                                    <i data-lucide="cpu" class="center-glyph-icon"></i>
+                                </div>
+                            </div>
+                            <div class="center-portrait-wrapper" data-member="anurag">
+                                <img src="assets/team/anurag-team.png" alt="Anurag Kumar Goutam" class="center-portrait">
+                            </div>
+                            <div class="center-portrait-wrapper" data-member="datta">
+                                <img src="assets/team/datta-team.png" alt="Datta Panchal" class="center-portrait">
+                            </div>
+                        </div>
+
+                        <!-- Orbiting Team Nodes (130px size) -->
+                        <div class="cinematic-node" data-member="siddhi">
+                            <div class="node-glow"></div>
+                            <div class="node-cutout-container">
+                                <img src="assets/team/siddhi-k.png" alt="Siddhi Kawade" class="node-cutout">
+                            </div>
+                            <span class="cinematic-node-label">Siddhi</span>
+                            <div class="node-info-text">
+                                <span class="node-label">Siddhi Kawade</span>
+                                <span class="node-mob-role">Frontend Engineering & User Experience</span>
+                                <span class="node-mob-exp">2 Years Experience</span>
+                            </div>
+                        </div>
+
+                        <div class="cinematic-node" data-member="vishwanath">
+                            <div class="node-glow"></div>
+                            <div class="node-cutout-container">
+                                <img src="assets/team/vishwanath-hatti.png" alt="Vishwanath Hatti" class="node-cutout">
+                            </div>
+                            <span class="cinematic-node-label">Vishwanath</span>
+                            <div class="node-info-text">
+                                <span class="node-label">Vishwanath Hatti</span>
+                                <span class="node-mob-role">Full-Stack Development & Platform Architecture</span>
+                                <span class="node-mob-exp">4 Years Experience</span>
+                            </div>
+                        </div>
+
+                        <div class="cinematic-node" data-member="prathmesh">
+                            <div class="node-glow"></div>
+                            <div class="node-cutout-container">
+                                <img src="assets/team/prathmesh.png" alt="Prathmesh Ghatmal" class="node-cutout">
+                            </div>
+                            <span class="cinematic-node-label">Prathmesh</span>
+                            <div class="node-info-text">
+                                <span class="node-label">Prathmesh Ghatmal</span>
+                                <span class="node-mob-role">Product Engineering & Technology Strategy</span>
+                                <span class="node-mob-exp">4 Years Experience</span>
+                            </div>
+                        </div>
+
+                        <div class="cinematic-node" data-member="anish">
+                            <div class="node-glow"></div>
+                            <div class="node-cutout-container">
+                                <img src="assets/team/anish.png" alt="Anish" class="node-cutout">
+                            </div>
+                            <span class="cinematic-node-label">Anish</span>
+                            <div class="node-info-text">
+                                <span class="node-label">Anish</span>
+                                <span class="node-mob-role">AI/ML Engineering & Automation</span>
+                                <span class="node-mob-exp">4 Years Experience</span>
+                            </div>
+                        </div>
+
+                        <div class="cinematic-node" data-member="anurag">
+                            <div class="node-glow"></div>
+                            <div class="node-cutout-container">
+                                <img src="assets/team/anurag-team.png" alt="Anurag Kumar Goutam" class="node-cutout">
+                            </div>
+                            <span class="cinematic-node-label">Anurag</span>
+                            <div class="node-info-text">
+                                <span class="node-label">Anurag Kumar Goutam</span>
+                                <span class="node-mob-role">AI/ML Engineering & Intelligent Systems</span>
+                                <span class="node-mob-exp">3 Years Experience</span>
+                            </div>
+                        </div>
+
+                        <div class="cinematic-node" data-member="datta">
+                            <div class="node-glow"></div>
+                            <div class="node-cutout-container">
+                                <img src="assets/team/datta-team.png" alt="Datta Panchal" class="node-cutout">
+                            </div>
+                            <span class="cinematic-node-label">Datta</span>
+                            <div class="node-info-text">
+                                <span class="node-label">Datta Panchal</span>
+                                <span class="node-mob-role">Full-Stack Systems Engineering</span>
+                                <span class="node-mob-exp">3 Years Experience</span>
+                            </div>
+                        </div>
+
+                        <!-- Elegant Info Panel below active member -->
+                        <div class="cinematic-info-panel glass-card" id="cinematic-info-panel">
+                            <div class="panel-glow"></div>
+                            
+                            <!-- Stacked info contents for smooth cross-fading -->
+                            <div class="info-content-wrapper" data-member="siddhi">
+                                <div class="panel-profile-header">
+                                    <span class="panel-profile-badge badge-complete">COMPLETE</span>
+                                    <span class="panel-profile-date">Jan 2024</span>
+                                </div>
+                                <h3 class="panel-profile-name">Siddhi Kawade</h3>
+                                <p class="panel-profile-role">Frontend Engineering & User Experience</p>
+                                <div class="panel-profile-divider"></div>
+                                <div class="panel-profile-progress-container">
+                                    <div class="progress-labels">
+                                        <span class="progress-title"><i data-lucide="zap" class="progress-icon"></i> Experience Level</span>
+                                        <span class="progress-value">50%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-content-wrapper" data-member="vishwanath">
+                                <div class="panel-profile-header">
+                                    <span class="panel-profile-badge badge-complete">COMPLETE</span>
+                                    <span class="panel-profile-date">Feb 2024</span>
+                                </div>
+                                <h3 class="panel-profile-name">Vishwanath Hatti</h3>
+                                <p class="panel-profile-role">Full-Stack Development & Platform Architecture</p>
+                                <div class="panel-profile-divider"></div>
+                                <div class="panel-profile-progress-container">
+                                    <div class="progress-labels">
+                                        <span class="progress-title"><i data-lucide="zap" class="progress-icon"></i> Experience Level</span>
+                                        <span class="progress-value">100%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-content-wrapper" data-member="prathmesh">
+                                <div class="panel-profile-header">
+                                    <span class="panel-profile-badge badge-complete">COMPLETE</span>
+                                    <span class="panel-profile-date">Mar 2024</span>
+                                </div>
+                                <h3 class="panel-profile-name">Prathmesh Ghatmal</h3>
+                                <p class="panel-profile-role">Product Engineering & Technology Strategy</p>
+                                <div class="panel-profile-divider"></div>
+                                <div class="panel-profile-progress-container">
+                                    <div class="progress-labels">
+                                        <span class="progress-title"><i data-lucide="zap" class="progress-icon"></i> Experience Level</span>
+                                        <span class="progress-value">100%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-content-wrapper" data-member="anish">
+                                <div class="panel-profile-header">
+                                    <span class="panel-profile-badge badge-in-progress">IN PROGRESS</span>
+                                    <span class="panel-profile-date">Apr 2024</span>
+                                </div>
+                                <h3 class="panel-profile-name">Anish</h3>
+                                <p class="panel-profile-role" style="color: var(--accent-purple);">AI/ML Engineering & Automation</p>
+                                <div class="panel-profile-divider"></div>
+                                <div class="panel-profile-progress-container">
+                                    <div class="progress-labels">
+                                        <span class="progress-title"><i data-lucide="zap" class="progress-icon"></i> Experience Level</span>
+                                        <span class="progress-value">100%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-content-wrapper" data-member="anurag">
+                                <div class="panel-profile-header">
+                                    <span class="panel-profile-badge badge-pending">PENDING</span>
+                                    <span class="panel-profile-date">May 2024</span>
+                                </div>
+                                <h3 class="panel-profile-name">Anurag Kumar Goutam</h3>
+                                <p class="panel-profile-role">AI/ML Engineering & Intelligent Systems</p>
+                                <div class="panel-profile-divider"></div>
+                                <div class="panel-profile-progress-container">
+                                    <div class="progress-labels">
+                                        <span class="progress-title"><i data-lucide="zap" class="progress-icon"></i> Experience Level</span>
+                                        <span class="progress-value">75%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-content-wrapper" data-member="datta">
+                                <div class="panel-profile-header">
+                                    <span class="panel-profile-badge badge-in-progress">IN PROGRESS</span>
+                                    <span class="panel-profile-date">Jun 2024</span>
+                                </div>
+                                <h3 class="panel-profile-name">Datta Panchal</h3>
+                                <p class="panel-profile-role">Full-Stack Systems Engineering</p>
+                                <div class="panel-profile-divider"></div>
+                                <div class="panel-profile-progress-container">
+                                    <div class="progress-labels">
+                                        <span class="progress-title"><i data-lucide="zap" class="progress-icon"></i> Experience Level</span>
+                                        <span class="progress-value">75%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Client Results Section -->
+            <section class="results" id="results">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Built <span class="serif-emphasis">For Growth</span></h2>
+                    <p class="section-desc reveal-fade">
+                        Our track record proves our engineering capabilities. We turn client goals into high-performance metrics.
+                    </p>
+
+                    <div class="results-grid">
+                        <div class="results-card reveal-scale" data-hover-label="METRICS">
+                            <span class="res-num" data-target="50">0</span>
+                            <span class="res-title">Projects Delivered</span>
+                            <span class="res-desc">Custom enterprise and SaaS software systems running in production globally.</span>
+                        </div>
+                        <div class="results-card reveal-scale" data-hover-label="METRICS">
+                            <span class="res-num" data-target="98">0</span><span class="res-unit">%</span>
+                            <span class="res-title">Client Satisfaction</span>
+                            <span class="res-desc">Net promoter score maintained across high-velocity development pipelines.</span>
+                        </div>
+                        <div class="results-card reveal-scale" data-hover-label="METRICS">
+                            <span class="res-num" data-target="150">0</span><span class="res-unit">K+</span>
+                            <span class="res-title">Development Hours</span>
+                            <span class="res-desc">Experienced engineering dedicated to coding clean, secure architectures.</span>
+                        </div>
+                        <div class="results-card reveal-scale" data-hover-label="METRICS">
+                            <span class="res-unit">$</span><span class="res-num" data-target="24">0</span><span class="res-unit">M+</span>
+                            <span class="res-title">Revenue Generated</span>
+                            <span class="res-desc">Direct financial growth measured through automated funnels and scaling.</span>
+                        </div>
+                        <div class="results-card reveal-scale" data-hover-label="METRICS">
+                            <span class="res-num" data-target="10">0</span><span class="res-unit">M+</span>
+                            <span class="res-title">Processes Automated</span>
+                            <span class="res-desc">Background job sequences executed monthly with zero manual administration.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial Section -->
+            <section class="testimonials" id="testimonials">
+                <div class="section-container">
+                    <h2 class="section-title reveal-fade">Partner <span class="serif-emphasis">Testimonials</span></h2>
+                    <p class="section-desc reveal-fade">
+                        Hear from the founders, engineering heads, and executives who choose SKILLI to solve their critical system challenges.
+                    </p>
+
+                    <div class="testimonial-slider-container reveal-scale">
+                        <div class="testimonial-track" id="testimonial-track">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-slide">
+                                <div class="test-rating">
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                </div>
+                                <p class="test-quote">
+                                    "SKILLI is the code partner we had been looking for. They helped us engineer a serverless AI rendering engine for Thumbzy, reducing thumbnail generation latency to under 3 seconds and boosting our creators' CTR conversion rates by 142%."
+                                </p>
+                                <div class="test-client">
+                                    <div class="avatar-sim" style="background-image: linear-gradient(135deg, #00f0ff, #0072ff)">JD</div>
+                                    <div>
+                                        <span class="client-name">Jonathon Davies</span>
+                                        <span class="client-role">Founder & CEO, Thumbzy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial-slide">
+                                <div class="test-rating">
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                </div>
+                                <p class="test-quote">
+                                    "We faced scaling challenges during flash sales with constant checkout queue bottlenecks. SKILLI re-engineered our headless Hydrogen checkout page using high-speed GraphQL APIs. Our checkout conversion rates instantly spiked by 2.4x."
+                                </p>
+                                <div class="test-client">
+                                    <div class="avatar-sim" style="background-image: linear-gradient(135deg, #ff0055, #9d4edd)">SL</div>
+                                    <div>
+                                        <span class="client-name">Sarah Lindqvist</span>
+                                        <span class="client-role">VP of Product, GIA</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial-slide">
+                                <div class="test-rating">
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                </div>
+                                <p class="test-quote">
+                                    "Marcus from LinkFree: Most agencies focus on checking off items in a contract, but SKILLI acted like true co-founders. They helped us design a mobile-first monetization portal that processed millions in creator UPI revenue with peak security."
+                                </p>
+                                <div class="test-client">
+                                    <div class="avatar-sim" style="background-image: linear-gradient(135deg, #39ff14, #0072ff)">MR</div>
+                                    <div>
+                                        <span class="client-name">Marcus Reed</span>
+                                        <span class="client-role">COO, LinkFree</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <button class="slider-btn btn-prev" id="slider-prev" aria-label="Previous Testimonial"><i data-lucide="chevron-left"></i></button>
+                            <div class="slider-dots" id="slider-dots"></div>
+                            <button class="slider-btn btn-next" id="slider-next" aria-label="Next Testimonial"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section class="final-cta" id="contact">
+                <div class="cta-gradient-bg"></div>
+                <div class="section-container">
+                    <div class="cta-inner reveal-scale">
+                        <div class="cta-badge">
+                            <span class="pulse-indicator"></span>
+                            <span>Project Openings Available</span>
+                        </div>
+                        <h2 class="cta-title">Ready To Turn Your <span class="serif-emphasis">Challenges Into Opportunities?</span></h2>
+                        <p class="cta-desc">
+                            Let's build technology that creates measurable business impact. Contact our team to schedule an architectural review session.
+                        </p>
+                        
+                        <div class="cta-actions">
+                            <a href="mailto:enquiry.skilli@gmail.com" class="btn btn-primary magnetic">
+                                <span>Schedule a Free Consultation</span>
+                                <i data-lucide="calendar"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary magnetic">
+                                <span>Start Your Project</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="section-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">
+                            <span class="logo-text">SKILLI</span>
+                            <span class="logo-dot"></span>
+                        </a>
+                        <p class="footer-tagline">
+                            High-end software engineering & digital transformation partner solving complex issues through technology.
+                        </p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Github Link"><i data-lucide="github"></i></a>
+                            <a href="#" aria-label="Linkedin Link"><i data-lucide="linkedin"></i></a>
+                            <a href="#" aria-label="Twitter Link"><i data-lucide="twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Android Development</a></li>
+                            <li><a href="#services">Full Stack Systems</a></li>
+                            <li><a href="#services">UI/UX Architecture</a></li>
+                            <li><a href="#services">Custom Cloud Solutions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#story">Our Story</a></li>
+                            <li><a href="#problems">Problem Solvers</a></li>
+                            <li><a href="#approach">Our Approach</a></li>
+                            <li><a href="#ecosystem">Ecosystem</a></li>
+                            <li><a href="#team-core">Team Core</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <h4>Contact Info</h4>
+                        <p class="contact-detail"><i data-lucide="mail"></i> enquiry.skilli@gmail.com</p>
+                        <p class="contact-detail"><i data-lucide="phone"></i> +91 8830727116</p>
+                        <p class="contact-detail"><i data-lucide="map-pin"></i> Pune, India</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 SKILLI Systems. All rights reserved.</p>
+                    <div class="footer-policy-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
