@@ -812,12 +812,11 @@ function initTeamOperatingCore() {
     
     // Stationary positions angles (Siddhi top-center, others balanced around it)
     const angles = [
-        3 * Math.PI / 2,         // siddhi: Top Center
-        11 * Math.PI / 6,        // vishwanath: Top Right
-        Math.PI / 6,             // prathmesh: Bottom Right
-        Math.PI / 2,             // anish: Bottom Center
-        5 * Math.PI / 6,         // anurag: Bottom Left
-        7 * Math.PI / 6          // datta: Top Left
+        3 * Math.PI / 2,                  // siddhi: Top Center
+        3 * Math.PI / 2 + 2 * Math.PI / 5, // vishwanath: Top Right
+        3 * Math.PI / 2 + 4 * Math.PI / 5, // prathmesh: Bottom Right
+        3 * Math.PI / 2 + 6 * Math.PI / 5, // anurag: Bottom Left
+        3 * Math.PI / 2 + 8 * Math.PI / 5  // datta: Top Left
     ];
 
     // Create SVG Connecting Lines dynamically
@@ -912,7 +911,7 @@ function initTeamOperatingCore() {
             // 2. Highlight SVG line
             lines.forEach((line, idx) => {
                 if (idx === index) {
-                    const strokeColor = key === 'anish' ? 'rgba(157, 78, 221, 0.75)' : 'rgba(0, 240, 255, 0.75)';
+                    const strokeColor = 'rgba(0, 240, 255, 0.75)';
                     line.setAttribute('stroke', strokeColor);
                     line.setAttribute('stroke-width', '2.5');
                     line.setAttribute('opacity', '1.0');
